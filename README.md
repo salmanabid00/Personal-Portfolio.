@@ -6,8 +6,6 @@ The portfolio is designed for clarity, performance, and a clean user experience.
 
 ---
 
-## 🚀 Live Demo
-[View Portfolio](https://your-live-demo-link.com)
 
 ---
 
@@ -75,10 +73,11 @@ With over 2 years of learning and hands-on experience, I specialize in:
 📱 **Phone:** +92 336 7867681  
 📍 **Location:** Lahore, Pakistan  
 
-💼 **LinkedIn:** [linkedin.com/in/salmanabid](https://linkedin.com/in/salmanabid)  
-💻 **GitHub:** [github.com/salmanabid00](https://github.com/salmanabid00)
+  
+💻 **GitHub:** [[github.com/salmanabid00](https://github.com/salmanabid00)](https://github.com/salmanabid00/Personal-Portfolio.)
 
 ---
+
 
 
 
