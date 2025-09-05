@@ -1,0 +1,124 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * Keep variables in HSL format.
+  */
+  :root {
+    /* Core palette: dark navy background (#0a192f), yellow highlights (#facc15), white text */
+    --background: 216 65% 11%;
+    --foreground: 0 0% 100%;
+
+    --card: 215 36% 17%; /* slightly lighter panel */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 215 36% 17%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 48 96% 53%; /* yellow-400 */
+    --primary-foreground: 216 65% 11%;
+
+    --secondary: 215 28% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 20% 24%;
+    --muted-foreground: 210 20% 90%;
+
+    --accent: 215 20% 24%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 25%;
+    --input: 215 28% 25%;
+    --ring: 48 96% 53%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar tokens kept consistent */
+    --sidebar-background: 216 65% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 48 96% 53%;
+    --sidebar-primary-foreground: 216 65% 11%;
+    --sidebar-accent: 215 28% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 215 28% 25%;
+    --sidebar-ring: 48 96% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  }
+}
+
+@layer components {
+  .container-section {
+    @apply container mx-auto px-4 md:px-6 lg:px-8;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-white mb-6;
+  }
+  .yellow-underline {
+    @apply relative inline-block; }
+  .yellow-underline::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -6px;
+    width: 60%; height: 3px;
+    background: hsl(var(--primary));
+  }
+  .surface {
+    @apply rounded-xl bg-card/60 backdrop-blur border border-border shadow-[0_0_0_1px_rgba(0,0,0,0.1)];
+  }
+  .nav-link {
+    @apply text-sm md:text-base text-white/80 hover:text-white transition-colors; }
+  .btn-yellow {
+    @apply inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground font-semibold px-4 py-2 shadow hover:brightness-110 transition;
+  }
+
+  /* Project card pop / hover effect */
+  .project-card {
+    transition: transform .25s ease, box-shadow .25s ease;
+    will-change: transform;
+  }
+  .project-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+  }
+  .project-card img {
+    transition: transform .35s ease;
+    will-change: transform;
+  }
+  .project-card:hover img {
+    transform: scale(1.06);
+  }
+
+  /* Avatar hover */
+  .avatar-hover {
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .avatar-hover:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(2,6,23,0.6);
+  }
+
+}
